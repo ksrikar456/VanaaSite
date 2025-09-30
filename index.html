@@ -1,18 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Site</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Photo Gallery</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr); /* 5 images per row */
+      gap: 0; /* no spacing between */
+      width: 100vw;
+      height: 100vh;
+    }
+    .gallery img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* crop to fill without distortion */
+      display: block;
+    }
+  </style>
 </head>
 <body>
-  <h1>Hello World</h1>
-  <p>This is my static site.</p>
-
-  <!-- Image with caption -->
-  <div>
-    <img src="live.png" alt="Celebration Image" style="max-width:400px;">
-    <p>Woah, we’re live! Look at this handsome gentleman.</p>
+  <div class="gallery">
+    <img src="1.png" alt="Photo 1">
+    <img src="2.png" alt="Photo 2">
+    <img src="3.png" alt="Photo 3">
+    <img src="4.png" alt="Photo 4">
+    <img src="5.png" alt="Photo 5">
+    <img src="6.png" alt="Photo 6">
+    <img src="7.png" alt="Photo 7">
+    <img src="8.png" alt="Photo 8">
+    <img src="9.png" alt="Photo 9">
+    <img src="10.png" alt="Photo 10">
+    <img src="11.png" alt="Photo 11">
+    <img src="12.png" alt="Photo 12">
+    <img src="13.png" alt="Photo 13">
+    <img src="14.png" alt="Photo 14">
+    <img src="15.png" alt="Photo 15">
   </div>
 </body>
 </html>
