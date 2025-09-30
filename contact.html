@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Vanaa</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="index.html">Vanaa</a>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+</header>
+
+<main class="container section">
+  <h1>Contact</h1>
+
+  <div class="grid-2">
+    <div class="card pad">
+      <h2>Get in touch</h2>
+      <p>Email: <a href="mailto:info@vanaaofficial.com">info@vanaaofficial.com</a></p>
+      <p>Phone: +1 (123) 456-7890</p>
+      <p>Address: 500 Terry Francine Street, 6th Floor, San Francisco, CA 94158</p>
+    </div>
+
+    <!-- Static form; swap the action with a form service endpoint if you want submissions saved -->
+    <form class="card pad" action="mailto:info@vanaaofficial.com" method="post" enctype="text/plain">
+      <label>Name</label>
+      <input type="text" name="name" required />
+      <label>Email</label>
+      <input type="email" name="email" required />
+      <label>Message</label>
+      <textarea name="message" rows="6" required></textarea>
+      <button type="submit" class="btn primary">Send</button>
+      <p class="hint">To store submissions, replace this form’s action with a service endpoint (e.g., Formspree).</p>
+    </form>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid container">
+    <div>
+      <h4>Vanaa</h4>
+      <p><a href="mailto:info@vanaaofficial.com">info@vanaaofficial.com</a><br>+1 (123) 456-7890</p>
+    </div>
+    <div>
+      <p>500 Terry Francine Street<br>6th Floor, San Francisco, CA 94158</p>
+    </div>
+    <div>
+      <ul class="policy">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Accessibility Statement</a></li>
+        <li><a href="#">Terms &amp; Conditions</a></li>
+        <li><a href="#">Refund Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="copy">© 2025 Vanaa</div>
+</footer>
+</body>
+</html>

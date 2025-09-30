@@ -1,45 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Photo Gallery</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr); /* 5 images per row */
-      gap: 0; /* no spacing between */
-      width: 100vw;
-      height: 100vh;
-    }
-    .gallery img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; /* crop to fill without distortion */
-      display: block;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vanaa — Student Wellness Platform</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="gallery">
-    <img src="1.png" alt="Photo 1">
-    <img src="2.png" alt="Photo 2">
-    <img src="3.png" alt="Photo 3">
-    <img src="4.png" alt="Photo 4">
-    <img src="5.png" alt="Photo 5">
-    <img src="6.png" alt="Photo 6">
-    <img src="7.png" alt="Photo 7">
-    <img src="8.png" alt="Photo 8">
-    <img src="9.png" alt="Photo 9">
-    <img src="10.png" alt="Photo 10">
-    <img src="11.png" alt="Photo 11">
-    <img src="12.png" alt="Photo 12">
-    <img src="13.png" alt="Photo 13">
-    <img src="14.png" alt="Photo 14">
-    <img src="15.png" alt="Photo 15">
+<header class="site-header">
+  <a class="brand" href="index.html">Vanaa</a>
+  <nav class="nav">
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section class="hero container">
+    <div class="hero-text">
+      <p class="eyebrow">Wellness</p>
+      <h1>Nurturing<br>Healthy<br>Futures<br>Together</h1>
+      <p class="sub">Your partner in student wellness.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="contact.html">Get Started</a>
+      </div>
+    </div>
+    <div class="hero-media">
+      <img src="images/hero.jpg" alt="Student smiling outdoors" />
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="container section">
+    <h2>Services</h2>
+    <div class="list">
+      <article class="list-row">
+        <div class="list-left">
+          <img class="avatar" src="images/service-performance.jpg" alt="" />
+          <h3>Student Performance Monitoring</h3>
+        </div>
+        <div class="list-mid">$100</div>
+        <div class="list-right">
+          <a class="btn outline" href="about.html">View Course</a>
+        </div>
+      </article>
+
+      <article class="list-row">
+        <div class="list-left">
+          <img class="avatar" src="images/service-form.jpg" alt="" />
+          <h3>Form Correction</h3>
+        </div>
+        <div class="list-mid">$50</div>
+        <div class="list-right">
+          <a class="btn outline" href="contact.html">Book Now</a>
+        </div>
+      </article>
+
+      <article class="list-row">
+        <div class="list-left">
+          <img class="avatar" src="images/service-nutrition.jpg" alt="" />
+          <h3>Nutrition Guidance</h3>
+        </div>
+        <div class="list-mid">$70</div>
+        <div class="list-right">
+          <a class="btn outline" href="contact.html">Book Now</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Insights -->
+  <section class="container section">
+    <h2>Our Insights</h2>
+    <div class="insights">
+      <figure class="card">
+        <img src="images/insight-run.jpg" alt="Students running outdoors" />
+        <figcaption>Active campuses drive outcomes</figcaption>
+      </figure>
+      <figure class="card">
+        <img src="images/insight-class.jpg" alt="Students studying in classroom" />
+        <figcaption>Data-informed instruction</figcaption>
+      </figure>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid container">
+    <div>
+      <h4>Vanaa</h4>
+      <p><a href="mailto:info@vanaaofficial.com">info@vanaaofficial.com</a><br>+1 (123) 456-7890</p>
+    </div>
+    <div>
+      <p>500 Terry Francine Street<br>6th Floor, San Francisco, CA 94158</p>
+      <p class="social">● ● ● ●</p>
+    </div>
+    <div>
+      <ul class="policy">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Accessibility Statement</a></li>
+        <li><a href="#">Terms &amp; Conditions</a></li>
+        <li><a href="#">Refund Policy</a></li>
+      </ul>
+    </div>
   </div>
+  <div class="copy">© 2025 Vanaa</div>
+</footer>
 </body>
 </html>
