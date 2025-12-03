@@ -17,15 +17,12 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Mobile menu toggle
   if (navToggle && navMenu) {
-    // Handle both click and touch events
+    // Simple toggle function - only acts on the actual toggle button
     function toggleMenu(e) {
-      // Only prevent default if this is actually the toggle button
-      if (e.target === navToggle || navToggle.contains(e.target)) {
-        e.preventDefault();
-        e.stopPropagation();
-        navToggle.classList.toggle('active');
-        navMenu.classList.toggle('active');
-      }
+      e.preventDefault();
+      e.stopPropagation();
+      navToggle.classList.toggle('active');
+      navMenu.classList.toggle('active');
     }
     
     navToggle.addEventListener('click', toggleMenu);
@@ -39,18 +36,13 @@ document.addEventListener('DOMContentLoaded', function() {
           navMenu.classList.remove('active');
         }
       });
-      link.addEventListener('touchstart', function() {
-        if (navMenu.classList.contains('active')) {
-          navToggle.classList.remove('active');
-          navMenu.classList.remove('active');
-        }
-      });
     });
     
     // Close mobile menu when clicking outside (only on mobile screens)
     function closeMenu(event) {
-      // Only close menu if we're on mobile and menu is actually open
+      // Only interfere if we're on mobile and menu is open
       if (window.innerWidth <= 768 && navMenu.classList.contains('active')) {
+        // Don't interfere with clicks on toggle button or nav menu itself
         if (!navToggle.contains(event.target) && !navMenu.contains(event.target)) {
           navToggle.classList.remove('active');
           navMenu.classList.remove('active');
@@ -59,7 +51,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     document.addEventListener('click', closeMenu);
-    document.addEventListener('touchstart', closeMenu);
     
     // Handle window resize - close mobile menu when switching to desktop
     window.addEventListener('resize', function() {
@@ -80,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const href = this.getAttribute('href');
       
       // Only apply smooth scrolling to anchor links (starting with #)
+      // Do NOT interfere with regular navigation links
       if (href && href.startsWith('#')) {
         e.preventDefault();
         const targetSection = document.querySelector(href);
@@ -94,6 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
           });
         }
       }
+      // For all other links (like /product/, /company/, etc.), let them work normally
     });
   });
   
