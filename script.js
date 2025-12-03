@@ -54,6 +54,14 @@ document.addEventListener('DOMContentLoaded', function() {
     
     document.addEventListener('click', closeMenu);
     document.addEventListener('touchstart', closeMenu);
+    
+    // Handle window resize - close mobile menu when switching to desktop
+    window.addEventListener('resize', function() {
+      if (window.innerWidth > 768) {
+        navToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+      }
+    });
   }
   
   // ===================================
