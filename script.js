@@ -19,10 +19,13 @@ document.addEventListener('DOMContentLoaded', function() {
   if (navToggle && navMenu) {
     // Handle both click and touch events
     function toggleMenu(e) {
-      e.preventDefault();
-      e.stopPropagation();
-      navToggle.classList.toggle('active');
-      navMenu.classList.toggle('active');
+      // Only prevent default if this is actually the toggle button
+      if (e.target === navToggle || navToggle.contains(e.target)) {
+        e.preventDefault();
+        e.stopPropagation();
+        navToggle.classList.toggle('active');
+        navMenu.classList.toggle('active');
+      }
     }
     
     navToggle.addEventListener('click', toggleMenu);
@@ -44,11 +47,14 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
     
-    // Close mobile menu when clicking outside
+    // Close mobile menu when clicking outside (only on mobile screens)
     function closeMenu(event) {
-      if (!navToggle.contains(event.target) && !navMenu.contains(event.target)) {
-        navToggle.classList.remove('active');
-        navMenu.classList.remove('active');
+      // Only close menu if we're on mobile and menu is actually open
+      if (window.innerWidth <= 768 && navMenu.classList.contains('active')) {
+        if (!navToggle.contains(event.target) && !navMenu.contains(event.target)) {
+          navToggle.classList.remove('active');
+          navMenu.classList.remove('active');
+        }
       }
     }
     
