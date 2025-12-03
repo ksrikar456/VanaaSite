@@ -1,542 +1,365 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vanaa — The Control Plane for Safe AI at Work</title>
-  <meta name="description" content="OS-level AI governance platform that provides enterprise control over AI usage while keeping sensitive data secure." />
-  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="OS-level AI governance platform that provides enterprise control over AI usage while keeping sensitive data secure.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
 </head>
 <body>
   <!-- Header -->
-  <header class="header" id="header">
-    <div class="container">
-      <nav class="nav">
-        <div class="nav-brand">
-          <a href="#hero" class="brand">Vanaa</a>
-        </div>
-        
-        <div class="nav-menu" id="nav-menu">
-          <a href="#product" class="nav-link">Product</a>
-          <a href="#how-it-works" class="nav-link">How It Works</a>
-          <a href="#industries" class="nav-link">Industries</a>
-          <a href="#why-vanaa" class="nav-link">Why Vanaa</a>
-          <a href="#roadmap" class="nav-link">Roadmap</a>
-          <a href="#security" class="nav-link">Security</a>
-          <a href="#contact" class="nav-link">Contact</a>
-        </div>
-        
-        <div class="nav-actions">
-          <a href="#contact" class="btn btn-primary">Request a Pilot</a>
-          <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
-      </nav>
-    </div>
+  <header class="site-header">
+    <nav class="header-nav">
+      <a href="/" class="header-brand">Vanaa</a>
+      
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="/product/" class="nav-link">Product</a></li>
+        <li><a href="/how-it-works/" class="nav-link">How It Works</a></li>
+        <li><a href="/industries/" class="nav-link">Industries</a></li>
+        <li><a href="/why-vanaa/" class="nav-link">Why Vanaa</a></li>
+        <li><a href="/security/" class="nav-link">Security</a></li>
+        <li><a href="/resources/" class="nav-link">Resources</a></li>
+        <li><a href="/company/" class="nav-link">Company</a></li>
+        <li><a href="/contact/" class="nav-link">Contact</a></li>
+      </ul>
+      
+      <div class="nav-actions">
+        <a href="/contact/" class="btn btn-primary">Request a Pilot</a>
+        <button class="mobile-menu-toggle" id="mobile-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero" id="hero">
-    <div class="container">
-      <div class="hero-content">
-        <div class="hero-text">
-          <h1 class="hero-title">The control plane for safe AI at work</h1>
-          <p class="hero-subtitle">
-            OS-level AI governance that gives security leaders a single control point for AI usage across all applications, 
-            while automatically redacting sensitive data before it ever leaves the device.
-          </p>
-          
-          <ul class="hero-features">
-            <li>OS-level visibility across all apps, not just browsers</li>
-            <li>Automatic local redaction of sensitive data before AI processing</li>
-            <li>Model-agnostic platform supporting all leading AI services</li>
-            <li>Unified governance and complete audit trails for compliance</li>
-          </ul>
-          
-          <div class="hero-cta">
-            <a href="#contact" class="btn btn-primary">Request a Pilot</a>
-            <a href="#contact" class="btn btn-secondary">Talk to Security</a>
-          </div>
-        </div>
-        
-        <div class="hero-visual">
-          <div class="dashboard-mockup">
-            <div class="dashboard-header">
-              <div class="dashboard-title">Vanaa Control Center</div>
-              <div class="dashboard-status">
-                <span class="status-dot active"></span>
-                <span>Protecting 1,247 devices</span>
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Hero Section -->
+    <section class="section-hero bg-orb fade-in">
+      <div class="container">
+        <div class="two-column">
+          <div class="column">
+            <h1 class="mb-lg">The control plane for safe AI at work</h1>
+            <p class="text-secondary mb-xl">
+              OS-level AI governance that gives security leaders a single control point for AI usage across all applications, 
+              while automatically redacting sensitive data before it ever leaves the device.
+            </p>
+            
+            <div class="mb-xl">
+              <div class="flex items-center gap-sm mb-sm">
+                <div class="badge badge-success">✓</div>
+                <span class="text-secondary">OS-level visibility across all apps, not just browsers</span>
               </div>
-            </div>
-            <div class="dashboard-stats">
-              <div class="stat-card">
-                <div class="stat-number">2,847</div>
-                <div class="stat-label">AI Requests Today</div>
+              <div class="flex items-center gap-sm mb-sm">
+                <div class="badge badge-success">✓</div>
+                <span class="text-secondary">Automatic local redaction of sensitive data before AI processing</span>
               </div>
-              <div class="stat-card">
-                <div class="stat-number">156</div>
-                <div class="stat-label">Sensitive Data Redacted</div>
+              <div class="flex items-center gap-sm mb-sm">
+                <div class="badge badge-success">✓</div>
+                <span class="text-secondary">Model-agnostic platform supporting all leading AI services</span>
               </div>
-              <div class="stat-card">
-                <div class="stat-number">100%</div>
-                <div class="stat-label">Policy Compliance</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Problem Section -->
-  <section class="section problem" id="problem">
-    <div class="container">
-      <div class="section-header">
-        <h2>The AI Productivity vs. Security Dilemma</h2>
-        <p class="section-subtitle">
-          Companies face an impossible choice: embrace AI productivity or maintain data security.
-        </p>
-      </div>
-      
-      <div class="problem-content">
-        <div class="problem-text">
-          <p>
-            Employees are using AI tools everywhere—ChatGPT, Gemini, coding assistants, browser extensions—
-            often pasting in sensitive documents without realizing the compliance implications.
-          </p>
-          <p>
-            Companies in regulated industries can't answer critical questions: 
-            <strong>"What data has left our walls, through which AI tools, and under what policies?"</strong>
-          </p>
-          <p>
-            Security leaders are told to both encourage AI usage for productivity gains and prevent any data leaks—
-            an impossible balance with current tools that only see part of the picture.
-          </p>
-        </div>
-        
-        <div class="problem-points">
-          <div class="pain-point">
-            <h4>Shadow AI Usage</h4>
-            <p>Unsanctioned AI tools on personal devices and unapproved platforms</p>
-          </div>
-          <div class="pain-point">
-            <h4>Data Leakage Risk</h4>
-            <p>Sensitive information shared with third-party AI models without oversight</p>
-          </div>
-          <div class="pain-point">
-            <h4>Compliance Blindness</h4>
-            <p>No audit trail for AI interactions across enterprise applications</p>
-          </div>
-          <div class="pain-point">
-            <h4>Regulatory Pressure</h4>
-            <p>Increasing expectations for AI governance and data residency controls</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Solution Overview -->
-  <section class="section solution" id="product">
-    <div class="container">
-      <div class="section-header">
-        <h2>Vanaa: OS-Level AI Governance</h2>
-        <p class="section-subtitle">
-          A secure layer on every corporate device that intercepts AI activity, redacts sensitive data locally, 
-          and creates complete audit trails—all while keeping employees productive.
-        </p>
-      </div>
-      
-      <div class="solution-steps">
-        <div class="step-card">
-          <div class="step-number">1</div>
-          <div class="step-content">
-            <h3>Observe</h3>
-            <p>Vanaa understands context across all applications—emails, documents, code, tickets, and more</p>
-          </div>
-        </div>
-        <div class="step-card">
-          <div class="step-number">2</div>
-          <div class="step-content">
-            <h3>Sanitize</h3>
-            <p>Applies company policies and redacts sensitive information locally before it leaves the device</p>
-          </div>
-        </div>
-        <div class="step-card">
-          <div class="step-number">3</div>
-          <div class="step-content">
-            <h3>Route & Log</h3>
-            <p>Sends clean prompts to chosen AI models and records complete audit trails for compliance</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- How It Works Detail -->
-  <section class="section how-it-works" id="how-it-works">
-    <div class="container">
-      <div class="section-header">
-        <h2>How Vanaa Works</h2>
-      </div>
-      
-      <div class="how-it-works-content">
-        <div class="perspective-card">
-          <h3>For the Enterprise & Security Team</h3>
-          <ul class="feature-list">
-            <li>Mandatory control layer deployed on every managed device</li>
-            <li>Local scanning and redaction of sensitive entities (PII, proprietary IP, confidential data) before data transmission</li>
-            <li>Centralized policy engine defining what's allowed, redacted, or blocked</li>
-            <li>Complete, searchable AI usage logs showing who used which model, with what data, under which policy</li>
-            <li>Real-time alerts and policy violations dashboard</li>
-            <li>Integration with existing security tools and compliance frameworks</li>
-          </ul>
-        </div>
-        
-        <div class="perspective-card">
-          <h3>For the Employee & Knowledge Worker</h3>
-          <ul class="feature-list">
-            <li>Simple hotkey activation to complete multi-step AI tasks across any application</li>
-            <li>Access to best-in-class AI models without compliance concerns</li>
-            <li>Seamless workflow integration—security happens transparently behind the scenes</li>
-            <li>Fast, unobtrusive experience that enhances rather than hinders productivity</li>
-            <li>Smart context awareness that understands what you're working on</li>
-            <li>Personalized AI assistance that learns from approved usage patterns</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Industries -->
-  <section class="section industries" id="industries">
-    <div class="container">
-      <div class="section-header">
-        <h2>Built for High-Stakes, Data-Heavy Teams</h2>
-        <p class="section-subtitle">
-          Vanaa is designed for organizations where data security isn't optional—it's mission-critical.
-        </p>
-      </div>
-      
-      <div class="industry-grid">
-        <div class="industry-card">
-          <h3>Banking, Financial Services & Insurance</h3>
-          <p>
-            Financial institutions handle the most sensitive personal and transactional data. 
-            AI-related leaks can trigger massive regulatory penalties and destroy customer trust.
-          </p>
-          <div class="use-cases">
-            <strong>Safe AI workflows:</strong> Risk assessment summaries, regulatory document analysis, 
-            customer communication drafting with automatic PII redaction.
-          </div>
-        </div>
-        
-        <div class="industry-card">
-          <h3>Healthcare & Life Sciences</h3>
-          <p>
-            Protected health information (PHI) and clinical data require the strictest privacy controls. 
-            Even inadvertent exposure through AI tools can violate HIPAA and patient trust.
-          </p>
-          <div class="use-cases">
-            <strong>Safe AI workflows:</strong> Clinical report summarization, research literature review, 
-            treatment plan documentation with automatic PHI scrubbing.
-          </div>
-        </div>
-        
-        <div class="industry-card">
-          <h3>High-Tech & B2B SaaS</h3>
-          <p>
-            Technology companies risk exposing proprietary code, customer data, and competitive intelligence 
-            through coding assistants and productivity AI tools.
-          </p>
-          <div class="use-cases">
-            <strong>Safe AI workflows:</strong> Secure code review, API documentation generation, 
-            customer support automation with IP and customer data protection.
-          </div>
-        </div>
-        
-        <div class="industry-card">
-          <h3>Legal & Professional Services</h3>
-          <p>
-            Attorney-client privilege and confidential case information demand absolute protection. 
-            AI-assisted legal work cannot compromise client confidentiality or case strategies.
-          </p>
-          <div class="use-cases">
-            <strong>Safe AI workflows:</strong> Contract review summaries, legal research assistance, 
-            brief drafting with automatic client information redaction.
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why Vanaa -->
-  <section class="section why-vanaa" id="why-vanaa">
-    <div class="container">
-      <div class="section-header">
-        <h2>Why Vanaa Is Different</h2>
-        <p class="section-subtitle">
-          Current solutions only solve part of the AI governance puzzle. Vanaa provides complete endpoint control.
-        </p>
-      </div>
-      
-      <div class="comparison-grid">
-        <div class="comparison-card">
-          <h3>Governance Platforms</h3>
-          <div class="comparison-content">
-            <p><strong>What they do:</strong> Operate at policy and documentation level with frameworks and inventories.</p>
-            <p><strong>What they miss:</strong> No control over real-time employee behavior on actual devices and applications.</p>
-          </div>
-        </div>
-        
-        <div class="comparison-card">
-          <h3>Network & GenAI DLP</h3>
-          <div class="comparison-content">
-            <p><strong>What they do:</strong> Monitor data in transit or specific browsers for sensitive information.</p>
-            <p><strong>What they miss:</strong> Limited visibility into desktop apps, IDEs, and non-browser tools. Cannot distinguish helpful AI usage from harmful leakage.</p>
-          </div>
-        </div>
-        
-        <div class="comparison-card">
-          <h3>Embedded Vendor Assistants</h3>
-          <div class="comparison-content">
-            <p><strong>What they do:</strong> Provide AI capabilities within a single ecosystem or productivity suite.</p>
-            <p><strong>What they miss:</strong> Cannot govern how employees use competing tools or third-party AI models outside their ecosystem.</p>
-          </div>
-        </div>
-        
-        <div class="comparison-card vanaa-difference">
-          <h3>Vanaa's Approach</h3>
-          <div class="comparison-content">
-            <p><strong>Endpoint-based:</strong> Complete visibility into user workflows across all applications and AI interactions.</p>
-            <p><strong>Model-neutral:</strong> Supports multiple AI providers without vendor lock-in, giving organizations choice and flexibility.</p>
-            <p><strong>Single control point:</strong> One unified layer that bridges policy governance with actual employee AI usage behavior.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Roadmap -->
-  <section class="section roadmap" id="roadmap">
-    <div class="container">
-      <div class="section-header">
-        <h2>Where We Are Now</h2>
-        <p class="section-subtitle">
-          Vanaa has evolved from concept to working prototype, with a clear path to enterprise deployment.
-        </p>
-      </div>
-      
-      <div class="roadmap-timeline">
-        <div class="milestone completed">
-          <div class="milestone-marker"></div>
-          <div class="milestone-content">
-            <h3>Prototype Validated</h3>
-            <p>Core OS-level loop proven with working desktop agent that interprets real application screens and AI interactions.</p>
-          </div>
-        </div>
-        
-        <div class="milestone current">
-          <div class="milestone-marker"></div>
-          <div class="milestone-content">
-            <h3>v0 Client Development</h3>
-            <p>Building stable, deployable agent for Windows and macOS with hotkey activation, on-device sanitization, policy engine, and integrations with browsers, email, and code editors.</p>
-          </div>
-        </div>
-        
-        <div class="milestone future">
-          <div class="milestone-marker"></div>
-          <div class="milestone-content">
-            <h3>Design Partner Pilots</h3>
-            <p>Running live pilots with select organizations, gathering real-world usage data and security feedback to refine the product.</p>
-          </div>
-        </div>
-        
-        <div class="milestone future">
-          <div class="milestone-marker"></div>
-          <div class="milestone-content">
-            <h3>Enterprise-Ready Platform</h3>
-            <p>Mature policy engine, comprehensive integrations, enterprise security posture, and full compliance framework support.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Security -->
-  <section class="section security" id="security">
-    <div class="container">
-      <div class="section-header">
-        <h2>Security & Compliance by Design</h2>
-        <p class="section-subtitle">
-          Enterprise-grade security and privacy built into every layer of the Vanaa platform.
-        </p>
-      </div>
-      
-      <div class="security-grid">
-        <div class="security-principle">
-          <div class="principle-icon">🔒</div>
-          <h3>On-Device Processing</h3>
-          <p>All sensitive data analysis and redaction happens locally—sensitive information never leaves your devices unnecessarily.</p>
-        </div>
-        
-        <div class="security-principle">
-          <div class="principle-icon">🔍</div>
-          <h3>Complete Auditability</h3>
-          <p>Every AI interaction is logged with full context, providing transparent trails for compliance and security reviews.</p>
-        </div>
-        
-        <div class="security-principle">
-          <div class="principle-icon">🛡️</div>
-          <h3>Least Privilege Access</h3>
-          <p>Vanaa operates with minimal system permissions, accessing only what's necessary for AI governance and protection.</p>
-        </div>
-        
-        <div class="security-principle">
-          <div class="principle-icon">📊</div>
-          <h3>Data Minimization</h3>
-          <p>Only essential metadata is collected and stored—actual content remains on-device or is discarded after processing.</p>
-        </div>
-        
-        <div class="security-principle">
-          <div class="principle-icon">✅</div>
-          <h3>SOC 2 Ready</h3>
-          <p>Built from day one with enterprise security frameworks in mind, ready for formal security audits and compliance validation.</p>
-        </div>
-        
-        <div class="security-principle">
-          <div class="principle-icon">🌐</div>
-          <h3>GDPR Aligned</h3>
-          <p>Privacy-first architecture that supports modern data protection requirements and cross-border compliance needs.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section class="section contact" id="contact">
-    <div class="container">
-      <div class="section-header">
-        <h2>Work With Vanaa</h2>
-        <p class="section-subtitle">
-          Join CISOs, security leaders, and AI innovation teams from regulated organizations 
-          who are building the future of safe AI at work.
-        </p>
-      </div>
-      
-      <div class="contact-content">
-        <div class="contact-form-wrapper">
-          <form class="contact-form" id="contact-form">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" required>
-              </div>
-              <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" required>
+              <div class="flex items-center gap-sm">
+                <div class="badge badge-success">✓</div>
+                <span class="text-secondary">Unified governance and complete audit trails for compliance</span>
               </div>
             </div>
             
-            <div class="form-row">
-              <div class="form-group">
-                <label for="company">Company</label>
-                <input type="text" id="company" name="company" required>
-              </div>
-              <div class="form-group">
-                <label for="role">Role</label>
-                <select id="role" name="role" required>
-                  <option value="">Select your role</option>
-                  <option value="ciso">CISO / Security Leader</option>
-                  <option value="it">IT Leader</option>
-                  <option value="ai">AI / Innovation Leader</option>
-                  <option value="compliance">Compliance / Risk</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
+            <div class="flex gap-md md:flex-col">
+              <a href="/contact/" class="btn btn-primary btn-lg">Request a Pilot</a>
+              <a href="/contact/" class="btn btn-secondary btn-lg">Talk to Security</a>
             </div>
-            
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="4" placeholder="Tell us about your AI governance challenges or pilot interest..."></textarea>
-            </div>
-            
-            <div class="form-actions">
-              <button type="submit" class="btn btn-primary">Request a Pilot</button>
-              <button type="button" class="btn btn-secondary">Join as Design Partner</button>
-            </div>
-          </form>
-        </div>
-        
-        <div class="contact-info">
-          <div class="contact-card">
-            <h3>Direct Contact</h3>
-            <p><a href="mailto:contact@vanaasecure.com">contact@vanaasecure.com</a></p>
-            <p>Enterprise Security Inquiries</p>
           </div>
           
-          <div class="contact-card">
-            <h3>Partnership Opportunities</h3>
-            <p>Design Partner Program</p>
-            <p>Security Advisory Board</p>
-            <p>Integration Partnerships</p>
+          <div class="column">
+            <div class="card card-glass">
+              <div class="flex justify-between items-center mb-lg">
+                <h4 class="mb-0">Vanaa Control Center</h4>
+                <div class="flex items-center gap-sm">
+                  <div class="badge badge-success badge-dot">Active</div>
+                  <span class="text-muted">Protecting devices</span>
+                </div>
+              </div>
+              
+              <div class="grid-cols-3 gap-md">
+                <div class="stat-card">
+                  <div class="stat-number">2.8K</div>
+                  <div class="stat-label">AI Requests Today</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-number">156</div>
+                  <div class="stat-label">Data Redacted</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-number">100%</div>
+                  <div class="stat-label">Policy Compliance</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="section bg-secondary fade-in">
+      <div class="container">
+        <div class="section-header">
+          <h2>The AI Productivity vs. Security Dilemma</h2>
+          <p class="section-subtitle">
+            Companies face an impossible choice: embrace AI productivity or maintain data security.
+          </p>
+        </div>
+        
+        <div class="two-column">
+          <div class="column">
+            <p class="text-secondary mb-lg">
+              Employees are using AI tools everywhere—ChatGPT, Gemini, coding assistants, browser extensions—
+              often pasting in sensitive documents without realizing the compliance implications.
+            </p>
+            <p class="text-secondary mb-lg">
+              Companies in regulated industries can't answer critical questions: 
+              <strong class="text-primary">"What data has left our walls, through which AI tools, and under what policies?"</strong>
+            </p>
+            <p class="text-secondary">
+              Security leaders are told to both encourage AI usage for productivity gains and prevent any data leaks—
+              an impossible balance with current tools that only see part of the picture.
+            </p>
+          </div>
+          
+          <div class="column">
+            <div class="grid gap-md">
+              <div class="card card-sm">
+                <h4>Shadow AI Usage</h4>
+                <p class="text-secondary mb-0">Unsanctioned AI tools on personal devices and unapproved platforms</p>
+              </div>
+              <div class="card card-sm">
+                <h4>Data Leakage Risk</h4>
+                <p class="text-secondary mb-0">Sensitive information shared with third-party AI models without oversight</p>
+              </div>
+              <div class="card card-sm">
+                <h4>Compliance Blindness</h4>
+                <p class="text-secondary mb-0">No audit trail for AI interactions across enterprise applications</p>
+              </div>
+              <div class="card card-sm">
+                <h4>Regulatory Pressure</h4>
+                <p class="text-secondary mb-0">Increasing expectations for AI governance and data residency controls</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solution Overview -->
+    <section class="section fade-in">
+      <div class="container">
+        <div class="section-header">
+          <h2>Vanaa: OS-Level AI Governance</h2>
+          <p class="section-subtitle">
+            A secure layer on every corporate device that intercepts AI activity, redacts sensitive data locally, 
+            and creates complete audit trails—all while keeping employees productive.
+          </p>
+        </div>
+        
+        <div class="three-column">
+          <div class="card card-feature scale-hover">
+            <div class="card-icon">1</div>
+            <h3 class="card-title">Observe</h3>
+            <p class="card-description">
+              Vanaa understands context across all applications—emails, documents, code, tickets, and more
+            </p>
+          </div>
+          <div class="card card-feature scale-hover">
+            <div class="card-icon">2</div>
+            <h3 class="card-title">Sanitize</h3>
+            <p class="card-description">
+              Applies company policies and redacts sensitive information locally before it leaves the device
+            </p>
+          </div>
+          <div class="card card-feature scale-hover">
+            <div class="card-icon">3</div>
+            <h3 class="card-title">Route & Log</h3>
+            <p class="card-description">
+              Sends clean prompts to chosen AI models and records complete audit trails for compliance
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Industries -->
+    <section class="section bg-secondary fade-in">
+      <div class="container">
+        <div class="section-header">
+          <h2>Built for High-Stakes, Data-Heavy Teams</h2>
+          <p class="section-subtitle">
+            Vanaa is designed for organizations where data security isn't optional—it's mission-critical.
+          </p>
+        </div>
+        
+        <div class="four-column">
+          <div class="card scale-hover">
+            <div class="card-subtitle">BFSI</div>
+            <h3 class="card-title">Banking, Financial Services & Insurance</h3>
+            <p class="text-secondary mb-lg">
+              Financial institutions handle the most sensitive personal and transactional data. 
+              AI-related leaks can trigger massive regulatory penalties and destroy customer trust.
+            </p>
+            <div class="card-footer">
+              <p class="text-muted mb-0"><strong>Safe AI workflows:</strong> Risk assessment summaries, regulatory document analysis, 
+              customer communication drafting with automatic PII redaction.</p>
+            </div>
+          </div>
+          
+          <div class="card scale-hover">
+            <div class="card-subtitle">Healthcare</div>
+            <h3 class="card-title">Healthcare & Life Sciences</h3>
+            <p class="text-secondary mb-lg">
+              Protected health information (PHI) and clinical data require the strictest privacy controls. 
+              Even inadvertent exposure through AI tools can violate HIPAA and patient trust.
+            </p>
+            <div class="card-footer">
+              <p class="text-muted mb-0"><strong>Safe AI workflows:</strong> Clinical report summarization, research literature review, 
+              treatment plan documentation with automatic PHI scrubbing.</p>
+            </div>
+          </div>
+          
+          <div class="card scale-hover">
+            <div class="card-subtitle">Technology</div>
+            <h3 class="card-title">High-Tech & B2B SaaS</h3>
+            <p class="text-secondary mb-lg">
+              Technology companies risk exposing proprietary code, customer data, and competitive intelligence 
+              through coding assistants and productivity AI tools.
+            </p>
+            <div class="card-footer">
+              <p class="text-muted mb-0"><strong>Safe AI workflows:</strong> Secure code review, API documentation generation, 
+              customer support automation with IP and customer data protection.</p>
+            </div>
+          </div>
+          
+          <div class="card scale-hover">
+            <div class="card-subtitle">Legal</div>
+            <h3 class="card-title">Legal & Professional Services</h3>
+            <p class="text-secondary mb-lg">
+              Attorney-client privilege and confidential case information demand absolute protection. 
+              AI-assisted legal work cannot compromise client confidentiality or case strategies.
+            </p>
+            <div class="card-footer">
+              <p class="text-muted mb-0"><strong>Safe AI workflows:</strong> Contract review summaries, legal research assistance, 
+              brief drafting with automatic client information redaction.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust Indicators -->
+    <section class="section fade-in">
+      <div class="container">
+        <div class="text-center mb-xl">
+          <p class="text-muted mb-lg">Trusted by security teams at leading organizations</p>
+          <div class="flex justify-center items-center gap-2xl flex-wrap">
+            <div class="text-muted">Global Bank</div>
+            <div class="text-muted">•</div>
+            <div class="text-muted">Biotech Leader</div>
+            <div class="text-muted">•</div>
+            <div class="text-muted">Enterprise SaaS</div>
+            <div class="text-muted">•</div>
+            <div class="text-muted">Law Firm</div>
+            <div class="text-muted">•</div>
+            <div class="text-muted">Healthcare System</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section bg-gradient fade-in">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="mb-lg">Ready to secure your AI usage?</h2>
+          <p class="section-subtitle mb-xl">
+            Join CISOs, security leaders, and AI innovation teams from regulated organizations 
+            who are building the future of safe AI at work.
+          </p>
+          <div class="flex justify-center gap-md md:flex-col">
+            <a href="/contact/" class="btn btn-primary btn-xl">Request a Pilot</a>
+            <a href="/contact/" class="btn btn-secondary btn-xl">Join as Design Partner</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
-  <footer class="footer">
+  <footer class="site-footer">
     <div class="container">
       <div class="footer-content">
-        <div class="footer-brand">
-          <div class="brand">Vanaa</div>
-          <p>The control plane for safe AI at work</p>
+        <div class="footer-column">
+          <h4>Product</h4>
+          <ul class="footer-links">
+            <li><a href="/product/">Platform Overview</a></li>
+            <li><a href="/how-it-works/">How It Works</a></li>
+            <li><a href="/security/">Security & Compliance</a></li>
+            <li><a href="/why-vanaa/">Roadmap</a></li>
+          </ul>
         </div>
         
-        <div class="footer-links">
-          <div class="footer-column">
-            <h4>Product</h4>
-            <ul>
-              <li><a href="#product">Platform Overview</a></li>
-              <li><a href="#how-it-works">How It Works</a></li>
-              <li><a href="#security">Security & Compliance</a></li>
-              <li><a href="#roadmap">Roadmap</a></li>
-            </ul>
-          </div>
-          
-          <div class="footer-column">
-            <h4>Industries</h4>
-            <ul>
-              <li><a href="#industries">Financial Services</a></li>
-              <li><a href="#industries">Healthcare</a></li>
-              <li><a href="#industries">Technology</a></li>
-              <li><a href="#industries">Legal Services</a></li>
-            </ul>
-          </div>
-          
-          <div class="footer-column">
-            <h4>Company</h4>
-            <ul>
-              <li><a href="#contact">Contact</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Terms of Service</a></li>
-              <li><a href="#">Security</a></li>
-            </ul>
-          </div>
+        <div class="footer-column">
+          <h4>Industries</h4>
+          <ul class="footer-links">
+            <li><a href="/industries/">Financial Services</a></li>
+            <li><a href="/industries/">Healthcare</a></li>
+            <li><a href="/industries/">Technology</a></li>
+            <li><a href="/industries/">Legal Services</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="/company/">About</a></li>
+            <li><a href="/resources/">Resources</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Security</h4>
+          <ul class="footer-links">
+            <li><a href="/security/">Security Overview</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="/resources/">Blog</a></li>
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
         </div>
       </div>
       
       <div class="footer-bottom">
-        <p>&copy; 2025 Vanaa. All rights reserved.</p>
+        <div>&copy; 2025 Vanaa. All rights reserved.</div>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms</a>
+          <a href="#">Security</a>
+        </div>
       </div>
     </div>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
