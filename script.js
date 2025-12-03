@@ -68,21 +68,25 @@ document.addEventListener('DOMContentLoaded', function() {
   // SMOOTH SCROLLING
   // ===================================
   
-  // Smooth scroll for navigation links
+  // Smooth scroll for anchor links only (not navigation to other pages)
   navLinks.forEach(link => {
     link.addEventListener('click', function(e) {
-      e.preventDefault();
-      const targetId = this.getAttribute('href');
-      const targetSection = document.querySelector(targetId);
+      const href = this.getAttribute('href');
       
-      if (targetSection) {
-        const headerHeight = header ? header.offsetHeight : 80;
-        const targetPosition = targetSection.offsetTop - headerHeight - 20;
+      // Only apply smooth scrolling to anchor links (starting with #)
+      if (href && href.startsWith('#')) {
+        e.preventDefault();
+        const targetSection = document.querySelector(href);
         
-        window.scrollTo({
-          top: targetPosition,
-          behavior: 'smooth'
-        });
+        if (targetSection) {
+          const headerHeight = header ? header.offsetHeight : 80;
+          const targetPosition = targetSection.offsetTop - headerHeight - 20;
+        
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
       }
     });
   });
