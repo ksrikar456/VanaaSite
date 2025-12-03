@@ -10,10 +10,10 @@ document.addEventListener('DOMContentLoaded', function() {
   // NAVIGATION & MOBILE MENU
   // ===================================
   
-  const navToggle = document.getElementById('nav-toggle');
+  const navToggle = document.getElementById('mobile-toggle');
   const navMenu = document.getElementById('nav-menu');
   const navLinks = document.querySelectorAll('.nav-link');
-  const header = document.getElementById('header');
+  const header = document.querySelector('.site-header');
   
   // Mobile menu toggle
   if (navToggle && navMenu) {
