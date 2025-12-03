@@ -28,15 +28,19 @@ document.addEventListener('DOMContentLoaded', function() {
     navToggle.addEventListener('click', toggleMenu);
     navToggle.addEventListener('touchstart', toggleMenu, { passive: false });
     
-    // Close mobile menu when clicking on links
+    // Close mobile menu when clicking on links (only if mobile menu is open)
     navLinks.forEach(link => {
       link.addEventListener('click', function() {
-        navToggle.classList.remove('active');
-        navMenu.classList.remove('active');
+        if (navMenu.classList.contains('active')) {
+          navToggle.classList.remove('active');
+          navMenu.classList.remove('active');
+        }
       });
       link.addEventListener('touchstart', function() {
-        navToggle.classList.remove('active');
-        navMenu.classList.remove('active');
+        if (navMenu.classList.contains('active')) {
+          navToggle.classList.remove('active');
+          navMenu.classList.remove('active');
+        }
       });
     });
     
