@@ -103,6 +103,11 @@
   border: none;
   cursor: pointer;
   padding: var(--space-sm);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
 }
 
 .mobile-menu-toggle span {

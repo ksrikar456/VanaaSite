@@ -17,10 +17,16 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Mobile menu toggle
   if (navToggle && navMenu) {
-    navToggle.addEventListener('click', function() {
+    // Handle both click and touch events
+    function toggleMenu(e) {
+      e.preventDefault();
+      e.stopPropagation();
       navToggle.classList.toggle('active');
       navMenu.classList.toggle('active');
-    });
+    }
+    
+    navToggle.addEventListener('click', toggleMenu);
+    navToggle.addEventListener('touchstart', toggleMenu, { passive: false });
     
     // Close mobile menu when clicking on links
     navLinks.forEach(link => {
@@ -28,15 +34,22 @@ document.addEventListener('DOMContentLoaded', function() {
         navToggle.classList.remove('active');
         navMenu.classList.remove('active');
       });
+      link.addEventListener('touchstart', function() {
+        navToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
     });
     
     // Close mobile menu when clicking outside
-    document.addEventListener('click', function(event) {
+    function closeMenu(event) {
       if (!navToggle.contains(event.target) && !navMenu.contains(event.target)) {
         navToggle.classList.remove('active');
         navMenu.classList.remove('active');
       }
-    });
+    }
+    
+    document.addEventListener('click', closeMenu);
+    document.addEventListener('touchstart', closeMenu);
   }
   
   // ===================================
